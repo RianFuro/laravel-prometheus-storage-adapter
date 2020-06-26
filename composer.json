@@ -1,0 +1,33 @@
+{
+    "name": "rianfuro/laravel-prometheus-storage-adapter",
+    "description": "Laravel Eloquent storage adapter for the prometheus php client",
+    "type": "library",
+    "require": {
+        "laravel/framework": "^6.0",
+        "endclothing/prometheus_client_php": "^1.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelPrometheusStorageAdapter\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Florian Proksch",
+            "email": "florian.proksch@protonmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelPrometheusStorageAdapter\\ServiceProvider"
+            ]
+        }
+    }
+}
