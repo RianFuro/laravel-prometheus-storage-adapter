@@ -25,7 +25,6 @@ jobs:
           extensions: mbstring, intl
           ini-values: post_max_size=256M, short_open_tag=On
           coverage: none
-          tools: phpunit
 
       - name: Setup problem matchers for PHPUnit
         run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
@@ -45,4 +44,4 @@ jobs:
         run: composer install --prefer-dist
 
       - name: Test
-        run: phpunit
+        run: vendor/bin/phpunit
