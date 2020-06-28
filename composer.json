@@ -2,6 +2,7 @@
     "name": "rianfuro/laravel-prometheus-storage-adapter",
     "description": "Laravel Eloquent storage adapter for the prometheus php client",
     "type": "library",
+    "keywords": ["laravel", "eloquent", "prometheus", "storage", "adapter"],
     "require": {
         "laravel/framework": "^6.0",
         "endclothing/prometheus_client_php": "^1.0",
