@@ -116,6 +116,8 @@ class EloquentStorageAdapter implements Adapter
         /** @var HistogramBucket $bucket */
         $bucket = $sample->histogram_buckets()->firstOrCreate([
             'name' => $bucketToIncrease
+        ], [
+            'value' => 0
         ]);
         $bucket->update([
             'value' => $bucket->value + 1
