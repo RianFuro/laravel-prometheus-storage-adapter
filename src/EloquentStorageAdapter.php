@@ -206,4 +206,17 @@ class EloquentStorageAdapter implements Adapter
                 break;
         }
     }
+
+    /**
+     * Removes all previously stored metrics from underlying storage
+     *
+     * @throws StorageException
+     * @return void
+     */
+    public function wipeStorage(): void
+    {
+      HistogramBucket::delete();
+      Sample::delete();
+      Metric::delete();
+    }
 }
