@@ -5,7 +5,7 @@ use Prometheus\Storage\Adapter;
 
 class EloquentStorageAdapter implements Adapter
 {
-    public function collect()
+    public function collect(): array
     {
         $metrics = Metric::with(['samples.histogram_buckets'])->get();
         return $metrics->toBase()->map(function (Metric $metric) {
