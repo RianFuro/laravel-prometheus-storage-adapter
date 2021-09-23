@@ -61,6 +61,11 @@ class EloquentStorageAdapter implements Adapter
         })->toArray();
     }
 
+    public function updateSummary(array $data): void
+    {
+        // TODO: Implement updateSummary() method.
+    }
+
     /**
      * @param array $data {
      *  string name
